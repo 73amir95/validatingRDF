@@ -1,0 +1,2621 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP/"
+     xml:base="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP">
+        <rdfs:comment>Die SIOMKP (Structural Information Ontology by MarxKrontal and Partners) beschreibt die Datenerfassung und Datenhaltung bei der Bauwerksdiagnostik. Es werden mehrere Verfahren der zerstörungsarmen und der zerstörungsfreien Prüfung behandelt.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#basiertAuf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#basiertAuf">
+        <rdfs:comment>_basedOn</rdfs:comment>
+        <rdfs:label>basiert auf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#durchfuehren -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#durchfuehren">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#wirdDruchgefuehrtVon"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>_performs</rdfs:comment>
+        <rdfs:label>durchführen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#findetStatt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#findetStatt">
+        <rdfs:comment>_takesPlace</rdfs:comment>
+        <rdfs:label>findet statt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istBestandteil"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>_hasPart</rdfs:comment>
+        <rdfs:label>hat Bestandteil</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatErgebnis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatErgebnis">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istErgebnis"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>_hasResult</rdfs:comment>
+        <rdfs:label>hat Ergebnis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istBestandteil -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istBestandteil">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>_isPart</rdfs:comment>
+        <rdfs:label>ist Bestandteil</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istErgebnis -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istErgebnis">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>_isResult</rdfs:comment>
+        <rdfs:label>ist Ergebnis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#positioniert -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#positioniert">
+        <rdfs:comment>_positioned</rdfs:comment>
+        <rdfs:label>positioniert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#wirdDruchgefuehrtVon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#wirdDruchgefuehrtVon">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment>_isPerformedBy</rdfs:comment>
+        <rdfs:label>wird durchgeführt von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AbgleichGrenzwert -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AbgleichGrenzwert">
+        <rdfs:comment>_AlignmentValueLimit</rdfs:comment>
+        <rdfs:label>Abgleich Grenzwert</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Abstand -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Abstand">
+        <rdfs:comment>_Distance</rdfs:comment>
+        <rdfs:label>Abstand</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AnzahlProben -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AnzahlProben">
+        <rdfs:comment>_NumberSamples</rdfs:comment>
+        <rdfs:label>Anzahl Proben</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ArtDerPolarisation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ArtDerPolarisation">
+        <rdfs:comment>_TypeOfPolarization</rdfs:comment>
+        <rdfs:label>Art der Polarisation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AufschlussMenge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AufschlussMenge">
+        <rdfs:comment>_OutcropQuantity</rdfs:comment>
+        <rdfs:label>Aufschluss Menge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auftraggeber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auftraggeber">
+        <rdfs:comment>_ContractingAuthority</rdfs:comment>
+        <rdfs:label>Auftraggeber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auftragnehmer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auftragnehmer">
+        <rdfs:comment>_Contractor</rdfs:comment>
+        <rdfs:label>Auftragnehmer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ausrichtung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ausrichtung">
+        <rdfs:comment>_Orientation</rdfs:comment>
+        <rdfs:label>Ausrichtung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauelement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauelement">
+        <rdfs:comment>_BuildingElement</rdfs:comment>
+        <rdfs:label>Bauelement</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BaujahrAnfang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BaujahrAnfang">
+        <rdfs:comment>_YearOfConstructionStart</rdfs:comment>
+        <rdfs:label>Baujahr Anfang</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BaujahrEnde -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BaujahrEnde">
+        <rdfs:comment>_YearOfConstructionEnd</rdfs:comment>
+        <rdfs:label>Baujahr Ende</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteilgruppe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteilgruppe">
+        <rdfs:comment>_ComponentGroup</rdfs:comment>
+        <rdfs:label>Bauteilgruppe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauweise -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauweise">
+        <rdfs:comment>_ConstructionMethod</rdfs:comment>
+        <rdfs:label>Bauweise</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerksnummer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerksnummer">
+        <rdfs:comment>_ConstructionObjectNumber</rdfs:comment>
+        <rdfs:label>Bauwerksnummer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerkstyp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerkstyp">
+        <rdfs:comment>_TypeOfBuilding</rdfs:comment>
+        <rdfs:label>Bauwerkstyp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Beiwert -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Beiwert">
+        <rdfs:comment>_Coefficient</rdfs:comment>
+        <rdfs:label>Beiwert</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BeiwertM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BeiwertM">
+        <rdfs:comment>_CoefficientM</rdfs:comment>
+        <rdfs:label>Beiwert M</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung">
+        <rdfs:comment>_Remark</rdfs:comment>
+        <rdfs:label>Bemerkung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Beschreibung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Beschreibung">
+        <rdfs:comment>_Description</rdfs:comment>
+        <rdfs:label>Beschreibung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Besonderheit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Besonderheit">
+        <rdfs:comment>_SpecialFeature</rdfs:comment>
+        <rdfs:label>Besonderheit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Betondeckung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Betondeckung">
+        <rdfs:comment>_ConcreteCover</rdfs:comment>
+        <rdfs:label>Betondeckung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BewehrungVorhanden -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BewehrungVorhanden">
+        <rdfs:comment>_ReinforcmentPresent</rdfs:comment>
+        <rdfs:label>Ist Bewehrung vorhanden?</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht">
+        <rdfs:comment>_NameTestReport</rdfs:comment>
+        <rdfs:label>Bezeichnung Prüfbericht</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrdurchmesser -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrdurchmesser">
+        <rdfs:comment>_DrillDiameter</rdfs:comment>
+        <rdfs:label>Bohrdurchmesser</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrtiefe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrtiefe">
+        <rdfs:comment>_DrillingDepth</rdfs:comment>
+        <rdfs:label>Bohrtiefe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Carbonatisierungstiefe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Carbonatisierungstiefe">
+        <rdfs:comment>Einheit: mm</rdfs:comment>
+        <rdfs:comment>_CarbonationDepth</rdfs:comment>
+        <rdfs:label>Carbonatisierungstiefe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ChloridGehaltAufschluss -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ChloridGehaltAufschluss">
+        <rdfs:comment>_ChloridQuantityOutcrop</rdfs:comment>
+        <rdfs:label>Chlorid Gehalt Aufschluss</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ChloridGehaltProbe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ChloridGehaltProbe">
+        <rdfs:comment>_ChloridQuantitySample</rdfs:comment>
+        <rdfs:label>Chlorid Gehalt Probe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiformatMessdatei -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiformatMessdatei">
+        <rdfs:comment>_FileFormatMeasurementFile</rdfs:comment>
+        <rdfs:label>Dateiformat Messdatei</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiformatMessparameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiformatMessparameter">
+        <rdfs:comment>_FileFormatMeasurementParameters</rdfs:comment>
+        <rdfs:label>Dateiformat Messparameter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameDokumentation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameDokumentation">
+        <rdfs:comment>_FileNameDocumentation</rdfs:comment>
+        <rdfs:label>Dateiname Dokumentation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameMessdatei -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameMessdatei">
+        <rdfs:comment>_FileNameMeasurementFile</rdfs:comment>
+        <rdfs:label>Dateiname Messdatei</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameMessparameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameMessparameter">
+        <rdfs:comment>_FileNameMeasurementParameters</rdfs:comment>
+        <rdfs:label>Dateiname Messparameter</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiverzeichnisMessdatei -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiverzeichnisMessdatei">
+        <rdfs:comment>_FileDirectoryMeasurementFile</rdfs:comment>
+        <rdfs:label>Dateiverzeichnis Messdatei</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Datum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Datum">
+        <rdfs:comment>_Date</rdfs:comment>
+        <rdfs:label>Datum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DatumAnfang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DatumAnfang">
+        <rdfs:comment>_DateStart</rdfs:comment>
+        <rdfs:label>Datum Anfang</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DatumEnde -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DatumEnde">
+        <rdfs:comment>_DateEnd</rdfs:comment>
+        <rdfs:label>Datum Ende</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Druckfestigkeitsklasse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Druckfestigkeitsklasse">
+        <rdfs:comment>_CompressiveStrengthClass</rdfs:comment>
+        <rdfs:label>Druckfestigkeitsklasse</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Durchmesser -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Durchmesser">
+        <rdfs:comment>_Diameter</rdfs:comment>
+        <rdfs:label>Durchmesser</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Eigentuemer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Eigentuemer">
+        <rdfs:comment>_Owner</rdfs:comment>
+        <rdfs:label>Eigentümer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Enddatum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Enddatum">
+        <rdfs:comment>_DateEnd</rdfs:comment>
+        <rdfs:label>Enddatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Firma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Firma">
+        <rdfs:comment>_Company</rdfs:comment>
+        <rdfs:label>Firma</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Foto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Foto">
+        <rdfs:comment>_Foto</rdfs:comment>
+        <rdfs:label>Foto</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Geraet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Geraet">
+        <rdfs:comment>_Device</rdfs:comment>
+        <rdfs:label>Gerät</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#GewichtBetonprobe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#GewichtBetonprobe">
+        <rdfs:comment>_WeightConcreteSample</rdfs:comment>
+        <rdfs:label>Gewicht der Betonprobe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Hausnummer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Hausnummer">
+        <rdfs:comment>_StreetNumber</rdfs:comment>
+        <rdfs:label>Hausnummer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Inbetriebnahme -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Inbetriebnahme">
+        <rdfs:comment>PuttingIntoService</rdfs:comment>
+        <rdfs:label>Inbetriebnahme</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#IngenieurtechnischeAuswertung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#IngenieurtechnischeAuswertung">
+        <rdfs:comment>_EngineeringEvaluation</rdfs:comment>
+        <rdfs:label>Ing.-tech. Auswertung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#IngenieurtechnischeBewertung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#IngenieurtechnischeBewertung">
+        <rdfs:comment>_EngineeringAssesment</rdfs:comment>
+        <rdfs:label>Ing.-tech. Bewertung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kabelbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kabelbezeichnung">
+        <rdfs:comment>_CableName</rdfs:comment>
+        <rdfs:label>Kabelbezeichnung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kamera -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kamera">
+        <rdfs:comment>_Camera</rdfs:comment>
+        <rdfs:label>Kamera</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kilometrierung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kilometrierung">
+        <rdfs:comment>_KilometrePosition</rdfs:comment>
+        <rdfs:label>Kilometrierung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Koordinatensystem -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Koordinatensystem">
+        <rdfs:comment>_CoordinateSystem</rdfs:comment>
+        <rdfs:label>Koordinatensystem</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Korrosion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Korrosion">
+        <rdfs:comment>_Corrosion</rdfs:comment>
+        <rdfs:label>Korrosion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Laborant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Laborant">
+        <rdfs:comment>_LaboratoryTechnician</rdfs:comment>
+        <rdfs:label>Laborant*in</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Leistungsbestandteil -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Leistungsbestandteil">
+        <rdfs:comment>_PerformanceComponent</rdfs:comment>
+        <rdfs:label>Leistungsbestandteil</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Material -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Material">
+        <rdfs:comment>_Material</rdfs:comment>
+        <rdfs:label>Material</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Merkblatt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Merkblatt">
+        <rdfs:comment>_InformationSheet</rdfs:comment>
+        <rdfs:label>Merkblatt</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessfeldbreiteX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessfeldbreiteX">
+        <rdfs:comment>_MeasuringFieldWidth</rdfs:comment>
+        <rdfs:label>Messfeldbreite X</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessfeldhoeheY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessfeldhoeheY">
+        <rdfs:comment>_MeasuringFieldHeight</rdfs:comment>
+        <rdfs:label>Messfeldhöhe Y</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messgeraet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messgeraet">
+        <rdfs:comment>_MeasuringDevice</rdfs:comment>
+        <rdfs:label>Messgerät</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messrichtung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messrichtung">
+        <rdfs:comment>_MeasuringDirection</rdfs:comment>
+        <rdfs:label>Messrichtung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessspurenX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessspurenX">
+        <rdfs:comment>_MeasuringTracksX</rdfs:comment>
+        <rdfs:label>Messspuren X</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessspurenY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessspurenY">
+        <rdfs:comment>_MeasuringTracksY</rdfs:comment>
+        <rdfs:label>Messspuren Y</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messverfahren -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messverfahren">
+        <rdfs:comment>_MeasuringMethod</rdfs:comment>
+        <rdfs:label>Messverfahren</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Mittelwert -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Mittelwert">
+        <rdfs:comment>_AverageValue</rdfs:comment>
+        <rdfs:label>Mittelwert</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name">
+        <rdfs:comment>_Name</rdfs:comment>
+        <rdfs:label>Name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NameLabor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NameLabor">
+        <rdfs:comment>_LaboratoryName</rdfs:comment>
+        <rdfs:label>Laborname</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NiedrigstesPruefergebnis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NiedrigstesPruefergebnis">
+        <rdfs:comment>_LowestTestResult</rdfs:comment>
+        <rdfs:label>niedrigstes Prüfergebnis</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Norm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Norm">
+        <rdfs:comment>_Norm</rdfs:comment>
+        <rdfs:label>Norm</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ort -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ort">
+        <rdfs:comment>_City</rdfs:comment>
+        <rdfs:label>Ort</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#PhenolphtaleinLoesung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#PhenolphtaleinLoesung">
+        <rdfs:comment>_PhenolphthaleinSolution</rdfs:comment>
+        <rdfs:label>Phenolphtalein-Lösung (1%)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Postleitzahl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Postleitzahl">
+        <rdfs:comment>_ZipCode</rdfs:comment>
+        <rdfs:label>Postleitzahl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probenbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probenbezeichnung">
+        <rdfs:comment>_SampleName</rdfs:comment>
+        <rdfs:label>Probenbezeichnung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probendurchmesser -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probendurchmesser">
+        <rdfs:comment>_SampleDiameter</rdfs:comment>
+        <rdfs:label>Probendurchmesser</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probenlaenge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probenlaenge">
+        <rdfs:comment>_SampleLength</rdfs:comment>
+        <rdfs:label>Probenlänge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProfilArt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProfilArt">
+        <rdfs:comment>_ProfileType</rdfs:comment>
+        <rdfs:label>Profil Art</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Projektbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Projektbezeichnung">
+        <rdfs:comment>_ProjectName</rdfs:comment>
+        <rdfs:label>Projektbezeichnung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProjektnummerAuftraggeber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProjektnummerAuftraggeber">
+        <rdfs:comment>_ProjectNumberContractingAuthority</rdfs:comment>
+        <rdfs:label>Projektnummer Auftraggeber</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProjektnummerAuftragnehmer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProjektnummerAuftragnehmer">
+        <rdfs:comment>_ProjectNumberContractor</rdfs:comment>
+        <rdfs:label>Projektnummer Auftragnehmer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Pruefanweisung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Pruefanweisung">
+        <rdfs:comment>_TestingInstructions</rdfs:comment>
+        <rdfs:label>Prüfanweisung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Pruefkopbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Pruefkopbezeichnung">
+        <rdfs:comment>_TestHeadName</rdfs:comment>
+        <rdfs:label>Prüfkopfbezeichnung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#PruefkopfankopplungKoppelmittel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#PruefkopfankopplungKoppelmittel">
+        <rdfs:comment>_TestHeadCouplingCouplingAgent</rdfs:comment>
+        <rdfs:label>Prüfkopfankopplung Koppelmittel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Prueftechnik -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Prueftechnik">
+        <rdfs:comment>_TypeOfTesting</rdfs:comment>
+        <rdfs:label>Prüftechnik</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Qualifikation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Qualifikation">
+        <rdfs:comment>_Qualification</rdfs:comment>
+        <rdfs:label>Qualifikation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#RasterweiteX -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#RasterweiteX">
+        <rdfs:comment>_GridSpacingX</rdfs:comment>
+        <rdfs:label>Rasterweite X</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#RasterweiteY -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#RasterweiteY">
+        <rdfs:comment>_GridSpacingY</rdfs:comment>
+        <rdfs:label>Rasterweite Y</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schallgeschwindigkeit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schallgeschwindigkeit">
+        <rdfs:comment>_SpeedOfSound</rdfs:comment>
+        <rdfs:label>Schallgeschwindigkeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schichtaufbau -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schichtaufbau">
+        <rdfs:comment>_LayerStructure</rdfs:comment>
+        <rdfs:label>Schichtaufbau</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schlankheit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schlankheit">
+        <rdfs:comment>_Slenderness</rdfs:comment>
+        <rdfs:label>Schlankheit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Seriennummer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Seriennummer">
+        <rdfs:comment>_SerialNumber</rdfs:comment>
+        <rdfs:label>Seriennummer</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Skizze -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Skizze">
+        <rdfs:comment>_Drawing</rdfs:comment>
+        <rdfs:label>Skizze</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Standardabweichung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Standardabweichung">
+        <rdfs:comment>_StandardDeviation</rdfs:comment>
+        <rdfs:label>Standardabweichung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Startdatum -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Startdatum">
+        <rdfs:comment>_DateStart</rdfs:comment>
+        <rdfs:label>Startdatum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Straße -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Straße">
+        <rdfs:comment>_Street</rdfs:comment>
+        <rdfs:label>Starße</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Streckenbezeichnung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Streckenbezeichnung">
+        <rdfs:comment>_DirectionalMarks</rdfs:comment>
+        <rdfs:label>Streckenbezeichnung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TechnischeVorschrift -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TechnischeVorschrift">
+        <rdfs:comment>_TechnicalRegulation</rdfs:comment>
+        <rdfs:label>technische Vorschrift</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Tiefe -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Tiefe">
+        <rdfs:comment>_Depth</rdfs:comment>
+        <rdfs:label>Tiefe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TiefeBis -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TiefeBis">
+        <rdfs:comment>_DepthTo</rdfs:comment>
+        <rdfs:label>Tiefe bis</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TiefeVon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TiefeVon">
+        <rdfs:comment>_DepthFrom</rdfs:comment>
+        <rdfs:label>Tiefe von</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TymolphthaleinLoesung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TymolphthaleinLoesung">
+        <rdfs:comment>_TymolphthaleinSolution</rdfs:comment>
+        <rdfs:label>Tymolphthalein-Lösung (1%)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Verduennungsgrad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Verduennungsgrad">
+        <rdfs:comment>_DegreeOfDilution</rdfs:comment>
+        <rdfs:label>Verdünnungsgrad</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Video -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Video">
+        <rdfs:comment>_Video</rdfs:comment>
+        <rdfs:label>Video</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Weblink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Weblink">
+        <rdfs:comment>_Weblink</rdfs:comment>
+        <rdfs:label>Weblink</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Wellenart -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Wellenart">
+        <rdfs:comment>_WaveType</rdfs:comment>
+        <rdfs:label>Wellenart</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertCharakteristischeDruckfestigkeit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertCharakteristischeDruckfestigkeit">
+        <rdfs:comment>_ValueCharacteristicCompressiveStrength</rdfs:comment>
+        <rdfs:label>Wert der charaktersitischen Druckfestigkeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertDruckfestigkeit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertDruckfestigkeit">
+        <rdfs:comment>_ValueCompressiveStrength</rdfs:comment>
+        <rdfs:label>Wert Druckfestigkeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertEModul -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertEModul">
+        <rdfs:comment>_ValueEValue</rdfs:comment>
+        <rdfs:label>Wert E-Modul</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertRohdichte -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertRohdichte">
+        <rdfs:comment>_ValueDensity</rdfs:comment>
+        <rdfs:label>Wert Rohdichte</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#XKoordinateGlobal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#XKoordinateGlobal">
+        <rdfs:comment>_XCoordinateGlobal</rdfs:comment>
+        <rdfs:label>X Koordinate (global)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#XKoordinateModell -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#XKoordinateModell">
+        <rdfs:comment>_XCoordinateModel</rdfs:comment>
+        <rdfs:label>X Koordinate Modell</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#YKoordinateGlobal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#YKoordinateGlobal">
+        <rdfs:comment>_YCoordinateGlobal</rdfs:comment>
+        <rdfs:label>Y Koordinate (global)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#YKoordinateModell -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#YKoordinateModell">
+        <rdfs:comment>_YCoordinateModel</rdfs:comment>
+        <rdfs:label>Y Koordinate Modell</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZKoordinateGlobal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZKoordinateGlobal">
+        <rdfs:comment>_ZCoordinateGlobal</rdfs:comment>
+        <rdfs:label>Z Koordinate (global)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZKoordinateModell -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZKoordinateModell">
+        <rdfs:comment>_ZCoordinateModel</rdfs:comment>
+        <rdfs:label>Z Koordinate Modell</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Zeit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Zeit">
+        <rdfs:comment>_Time</rdfs:comment>
+        <rdfs:label>Zeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitAnfang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitAnfang">
+        <rdfs:comment>_TimeStart</rdfs:comment>
+        <rdfs:label>Zeit Anfang</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitEnde -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitEnde">
+        <rdfs:comment>_TimeEnd</rdfs:comment>
+        <rdfs:label>Zeit Ende</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitlicherNullpunkt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitlicherNullpunkt">
+        <rdfs:comment>_TemporalZeroPoint</rdfs:comment>
+        <rdfs:label>zeitlicher Nullpunkt</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZielDerUntersuchung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZielDerUntersuchung">
+        <rdfs:comment>_AimOfInspection</rdfs:comment>
+        <rdfs:label>Ziel der Untersuchung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Zustand -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Zustand">
+        <rdfs:comment>_Condition</rdfs:comment>
+        <rdfs:label>Zustand</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auswertung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auswertung">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bewertung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#IngenieurtechnischeAuswertung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_evaluation</rdfs:comment>
+        <rdfs:label>Auswertung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteil">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsbereich"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#istBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ausrichtung"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauelement"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteilgruppe"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_ConstructionComponent</rdfs:comment>
+        <rdfs:label>Bauteil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerk">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DiagnostischesProjekt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Teilbauwerk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauweise"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Beschreibung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Besonderheit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ort"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Weblink"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerksnummer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Eigentuemer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BaujahrAnfang"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BaujahrEnde"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerkstyp"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Hausnummer"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Inbetriebnahme"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kilometrierung"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Koordinatensystem"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Postleitzahl"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Straße"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Streckenbezeichnung"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#XKoordinateGlobal"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#XKoordinateModell"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#YKoordinateGlobal"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#YKoordinateModell"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZKoordinateGlobal"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZKoordinateModell"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_ConstructionObject</rdfs:comment>
+        <rdfs:label>Bauwerk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bearbeiter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bearbeiter">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#durchfuehren"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Firma"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Qualifikation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_ResponsiblePerson</rdfs:comment>
+        <rdfs:label>Bearbeiter*in</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bewertung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bewertung">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#basiertAuf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auswertung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#IngenieurtechnischeBewertung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_assesment</rdfs:comment>
+        <rdfs:label>Bewertung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrkern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrkern">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AnzahlProben"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Foto erforderlich</rdfs:comment>
+        <rdfs:comment>_DrillCore</rdfs:comment>
+        <rdfs:label>Bohrkern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZaP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Material"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrdurchmesser"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrtiefe"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Foto erforderlich</rdfs:comment>
+        <rdfs:comment>_Drilling</rdfs:comment>
+        <rdfs:label>Bohrung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#CharakteristischeDruckfestigkeit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#CharakteristischeDruckfestigkeit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auswertung"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Druckfestigkeitsklasse"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schlankheit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AnzahlProben"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Beiwert"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BeiwertM"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Mittelwert"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NiedrigstesPruefergebnis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Standardabweichung"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertCharakteristischeDruckfestigkeit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_CharacteristicCompressiveStrength</rdfs:comment>
+        <rdfs:label>charakteristische Druckfestigkeit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Chloridanalyse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Chloridanalyse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AbgleichGrenzwert"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#AufschlussMenge"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ChloridGehaltAufschluss"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ChloridGehaltProbe"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#GewichtBetonprobe"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Laborant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messgeraet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NameLabor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Verduennungsgrad"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Einheit: Masse %</rdfs:comment>
+        <rdfs:comment>_ChloridAnalysis</rdfs:comment>
+        <rdfs:label>Chloridanalyse</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DiagnostischesProjekt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DiagnostischesProjekt">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauwerk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsziel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auftraggeber"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auftragnehmer"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Leistungsbestandteil"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Enddatum"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:nodeID="genid73"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Startdatum"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProjektnummerAuftraggeber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ProjektnummerAuftragnehmer"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_DiagnosticProject</rdfs:comment>
+        <rdfs:label>diagnostisches Projekt</rdfs:label>
+    </owl:Class>
+    <owl:Restriction rdf:nodeID="genid73">
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DiagnostischesProjekt"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:nodeID="genid73"/>
+        <rdfs:label>Projektbezeichnung</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Druckfestigkeitspruefung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Druckfestigkeitspruefung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Laborant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messgeraet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NameLabor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertDruckfestigkeit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Einheit: MPa</rdfs:comment>
+        <rdfs:comment>_CompressiveStrengthTesting</rdfs:comment>
+        <rdfs:label>Druckfestigkeitsprüfung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#EModulErmittlung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#EModulErmittlung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Laborant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messgeraet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NameLabor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertEModul"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Einheit: MPa</rdfs:comment>
+        <rdfs:comment>_EValue</rdfs:comment>
+        <rdfs:label>E-Modul Ermittlung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Indikatortest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Indikatortest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Carbonatisierungstiefe"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#PhenolphtaleinLoesung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TymolphthaleinLoesung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Einheit: mm</rdfs:comment>
+        <rdfs:comment>Foto erforderlich</rdfs:comment>
+        <rdfs:comment>_IndicatorTest</rdfs:comment>
+        <rdfs:label>Indikatortest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kernbohrung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kernbohrung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrung"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatErgebnis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bohrkern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_CoreDrilling</rdfs:comment>
+        <rdfs:label>Kernbohrung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messfeld -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messfeld">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessfeldbreiteX"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessfeldhoeheY"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messrichtung"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessspurenX"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#MessspurenY"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#RasterweiteX"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#RasterweiteY"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_MeasuringField</rdfs:comment>
+        <rdfs:label>Messfeld</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probe">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Datum"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messverfahren"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Material"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:nodeID="genid106"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probendurchmesser"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probenlaenge"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TiefeBis"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TiefeVon"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Zeit"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Foto erforderlich</rdfs:comment>
+        <rdfs:comment>_Sample</rdfs:comment>
+        <rdfs:label>Probe</rdfs:label>
+    </owl:Class>
+    <owl:Restriction rdf:nodeID="genid106">
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Probe"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:nodeID="genid106"/>
+        <rdfs:label>Probenbezeichnung</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Rohdichteermittlung -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Rohdichteermittlung">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Laborant"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messgeraet"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#NameLabor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#WertRohdichte"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#BezeichnungPruefbericht"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Einheit: kg/m^3</rdfs:comment>
+        <rdfs:comment>_DensityTesting</rdfs:comment>
+        <rdfs:label>Rohdichteermittlung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Teilbauwerk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Teilbauwerk">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ausrichtung"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_Substructure</rdfs:comment>
+        <rdfs:label>Teilbauwerk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungDatei -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungDatei">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiformatMessdatei"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiformatMessparameter"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameDokumentation"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameMessdatei"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateinameMessparameter"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DateiverzeichnisMessdatei"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_UltrasonicTestingFile</rdfs:comment>
+        <rdfs:label>Ultraschallmessung - Datei</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungGeraet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungGeraet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ArtDerPolarisation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Geraet"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Kabelbezeichnung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Material"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Pruefanweisung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Pruefkopbezeichnung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#PruefkopfankopplungKoppelmittel"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Prueftechnik"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Schallgeschwindigkeit"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Seriennummer"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Wellenart"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitlicherNullpunkt"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_UltrasonicTestingDevice</rdfs:comment>
+        <rdfs:label>Ultraschallmessung - Gerät</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungZeit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungZeit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DatumAnfang"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#DatumEnde"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitAnfang"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZeitEnde"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_UltrasonicTestingTime</rdfs:comment>
+        <rdfs:label>Ultraschallmessung - Zeit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ultraschallverfahren -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Ultraschallverfahren">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZfP"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Messfeld"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungDatei"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungGeraet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#UltraschallmessungZeit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_UltrasonicTesting</rdfs:comment>
+        <rdfs:label>Ultraschallverfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsbereich -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsbereich">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsstelle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#positioniert"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bauteil"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Foto erforderlich</rdfs:comment>
+        <rdfs:comment>_InspectionArea</rdfs:comment>
+        <rdfs:label>Untersuchungsbereich</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsstelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsstelle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#positioniert"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsbereich"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Foto erforderlich</rdfs:comment>
+        <rdfs:comment>_InspectionPoint</rdfs:comment>
+        <rdfs:label>Untersuchungsstelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Auswertung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#positioniert"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsstelle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#wirdDruchgefuehrtVon"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bearbeiter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Bemerkung"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Datum"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Zeit"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>_MeasurementMethod</rdfs:comment>
+        <rdfs:label>Untersuchungsverfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsziel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsziel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#hatBestandteil"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Merkblatt"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Norm"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#TechnischeVorschrift"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:nodeID="genid166"/>
+    </owl:Class>
+    <owl:Restriction rdf:nodeID="genid166">
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Name"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsziel"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget rdf:nodeID="genid166"/>
+        <rdfs:label>Untersuchungsziel</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZaP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZaP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:comment>_MinimalDestructiveTesting</rdfs:comment>
+        <rdfs:label>zerstörungsarmes Prüfverfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZfP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#ZfP">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yannic.stark/ontologies/2024/2/SIOMKP#Untersuchungsverfahren"/>
+        <rdfs:comment>_NonDestructiveTesting</rdfs:comment>
+        <rdfs:label>zerstörungsfreies Prüfverfahren</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

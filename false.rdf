@@ -1,0 +1,14 @@
+@prefix ex: <http://example.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:Alice a foaf:Person ;
+    foaf:name "Alice" ;
+    foaf:knows ex:Bob ;   # Missing period at the end of the triple
+    foaf:email "alice@example.com"
+
+ex:Bob a foaf:Person ;  # Missing period at the end of the triple
+    foaf:name "Bob" ;
+    foaf:knows ex:Charlie .
+
+ex:Charlie a foaf:Person ;
+    foaf:name "Charlie" .
